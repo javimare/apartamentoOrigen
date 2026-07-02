@@ -1,0 +1,552 @@
+/* =========================
+   VARIABLES Y ESTILOS BASE
+========================= */
+
+:root {
+    --azul: #1d3557;
+    --crema: #f6f1e7;
+    --verde: #7a8450;
+    --madera: #b08d57;
+    --blanco: #ffffff;
+    --sombra: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--crema);
+    color: var(--azul);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+img.icono {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 40px;
+    background: var(--verde);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 500;
+    transition: .4s;
+}
+
+.btn:hover {
+    background: var(--azul);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   MENÚ SUPERIOR
+========================= */
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(20, 30, 40, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--madera);
+}
+
+.menu-mobile {
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero span {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1rem;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    letter-spacing: 10px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+/* =========================
+   HISTORIA
+========================= */
+
+.historia {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.historia p {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.separador {
+    width: 80px;
+    height: 3px;
+    background: var(--madera);
+    margin: 25px auto 40px;
+}
+
+/* =========================
+   GALERÍA HERO + MOSAICO
+========================= */
+
+.galeria {
+    padding: 100px 5%;
+}
+
+.galeria-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.foto {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.foto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.foto img:hover {
+    transform: scale(1.08);
+}
+
+.hero2 {
+    grid-column: 1 / 5;
+}
+
+.hero2 img {
+    height: 500px;
+}
+
+.final {
+    grid-column: span 2;
+}
+
+.final img {
+    height: 350px;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.servicios {
+    padding: 120px 0;
+    background: #efe7d8;
+}
+
+.servicios-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.servicios-grid .card {
+    grid-column: span 2;
+}
+
+.servicios-grid .card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.servicios-grid .card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.card {
+    background: var(--blanco);
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* =========================
+   LA VERA
+========================= */
+
+.vera {
+    height: 70vh;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("img/lavera.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.vera .container {
+    text-align: center;
+}
+
+.vera h2,
+.vera p {
+    color: white;
+}
+
+.vera p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   UBICACIÓN
+========================= */
+
+.ubicacion {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.mapa {
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    padding: 120px 0;
+    background: var(--azul);
+    color: white;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: white;
+}
+
+.contacto-info {
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.dato {
+    padding: 30px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.dato:hover {
+    background: rgba(255,255,255,.15);
+    transform: translateY(-8px);
+}
+
+.dato i {
+    font-size: 2rem;
+    color: #d7b46a;
+    margin-bottom: 20px;
+}
+
+.dato h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #122238;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer h3 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    opacity: .8;
+}
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+/* =========================
+   ANIMACIONES SCROLL
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-info {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+}
+
+/* =========================
+   RESPONSIVE MÓVIL
+========================= */
+
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 3.8rem;
+        letter-spacing: 5px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero2,
+    .final {
+        grid-column: auto;
+    }
+
+    .hero2 img,
+    .final img,
+    .foto img {
+        height: 300px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios-grid .card,
+    .servicios-grid .card:nth-child(4),
+    .servicios-grid .card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .vera {
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .whatsapp {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7rem;
+    }
+
+    .menu-abierto {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(18, 34, 56, 0.98);
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 0;
+        gap: 25px;
+    }
+}
