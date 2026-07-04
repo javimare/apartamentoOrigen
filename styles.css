@@ -103,6 +103,13 @@ p {
     margin: auto;
 }
 
+.navbar img {
+  height: clamp(40px, 8vw, 70px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .logo {
     color: white;
     text-decoration: none;
