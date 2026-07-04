@@ -29,7 +29,7 @@ body {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     display: block;
 }
 
@@ -104,10 +104,10 @@ p {
 }
 
 .navbar img {
-  height: clamp(40px, 8vw, 70px);
-  width: auto;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  display: block;
+  flex-shrink: 0;
 }
 
 .logo {
