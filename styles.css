@@ -270,13 +270,7 @@ p {
     grid-column: span 2;
 }
 
-.servicios-grid .card:nth-child(4) {
-    grid-column: 2 / span 2;
-}
 
-.servicios-grid .card:nth-child(5) {
-    grid-column: 4 / span 2;
-}
 
 .card {
     background: var(--blanco);
